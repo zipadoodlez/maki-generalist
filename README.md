@@ -1,3 +1,5 @@
+![maki-generalist](assets/maki-generalist-swissarmyknife.png)
+
 # maki-generalist
 
 A maki plugin that makes maki a generalist.
