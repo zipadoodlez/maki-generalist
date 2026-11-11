@@ -13,12 +13,20 @@ code.
 
 ## Install
 
+In your **global** `~/.config/maki/init.lua` — the one maki loads for every
+project, not a project's `.maki/init.lua`:
+
 ```lua
 maki.pack.add({ "https://github.com/zipadoodlez/maki-generalist" })
 ```
 
-Update with `/packupdate`. Removing that line stops it loading and maki falls
-back to its own prompt.
+That has to be the global file. `maki.pack.add` is only available there; a
+project's `.maki/init.lua` can read package state but cannot add one.
+
+On the next start maki shows a single install prompt, writes the commit to
+`pack-lock.json` so another machine installs the same revision, and asks for no
+permissions. Update with `/packupdate`. Removing the line stops it loading and
+maki falls back to its own prompt.
 
 ## What installing it actually does
 
